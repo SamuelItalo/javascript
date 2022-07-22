@@ -21,13 +21,15 @@
     </div>
     <script>
         var tpais = window.document.getElementById('pais')
+        var pais = toString(tpais)  
         var res = document.getElementById('res')
-        res.innerText = `Vivendo em ${pais}`
-        /*if(pais == 'Brasil' || pais == 'brasil') {
+        
+
+        if(pais == 'Brasil') {
             res.innerHTML += (`<p> Vivendo em ${pais}, és Brasileiro(a)`)
         }else {
             res.innerHTML += (`<p> Vivendo em ${pais}, és Estrangeiro(a)`)
-        }*/
+        }
         
     </script>
 </body>
