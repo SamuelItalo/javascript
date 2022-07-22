@@ -12,7 +12,7 @@
     </style>
 </head>
 <body>
-    <h1>Sáiba aqui sua Nascionalidade</h1>
+    <h1>Saiba aqui sua Nascionalidade</h1>
     <label for="pais">País de origem:</label>
     <input type="text" name="pais" id="pais">
     <input type="button" value="Enviar">
@@ -20,14 +20,14 @@
 
     </div>
     <script>
-        var pais = document.getElementById('pais')
+        var tpais = window.document.getElementById('pais')
         var res = document.getElementById('res')
-    
-        if(pais == 'Brasil' || pais == 'brasil') {
+        res.innerText = `Vivendo em ${pais}`
+        /*if(pais == 'Brasil' || pais == 'brasil') {
             res.innerHTML += (`<p> Vivendo em ${pais}, és Brasileiro(a)`)
         }else {
             res.innerHTML += (`<p> Vivendo em ${pais}, és Estrangeiro(a)`)
-        }
+        }*/
         
     </script>
 </body>
