@@ -1,3 +1,5 @@
+const { set } = require("express/lib/application")
+
 function verificar() {
     var data = new Date()
     var ano = data.getFullYear()
@@ -24,24 +26,29 @@ function verificar() {
                 img.setAttribute('src', 'jovem-m.png')
             }else if (idade < 50 ) {
                 //Melhor idade
+                img.setAttribute('src', 'idoso-m.png')
             } else {
                 //Idoso
+                img.setAttribute('src', 'idoso-m.png')
             }
         }else if (fsex[1].checked) {
             genero = 'Mulher'
             if (idade >= 0 && idade < 10){
                 //Criança
+                img.setAttribute('src', 'bebe-f.jpg')
             }else if (idade < 21){
                 //Jovem
+                img.setAttribute('src', 'jovem-f.png')
             }else if (idade < 50 ) {
                 //Melhor idade
+                img.setAttribute('src', 'idoso-f.png')
             } else {
                 //Idoso
+                img.setAttribute('src', 'idoso-f.png')
             }
         }
         res.style.textAlign = 'center'
-        res.innerHTML = `Detectamos ${genero} com ${idade} anos.`
-        img.style.textAlign = 'center'
+        res.innerHTML = `Detectamos ${genero} com ${idade} anos.<br>`
         res.appendChild(img)
     }
 }
